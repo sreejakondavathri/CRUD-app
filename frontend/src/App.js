@@ -27,7 +27,7 @@ function App() {
   };
 
   const deleteTask = async (id) => {
-    await fetch(`http://localhost:5000/tasks/${id}`, {
+    await fetch(`http://13.63.157.143:5000/tasks/${id}`, {
       method: "DELETE"
     });
 
