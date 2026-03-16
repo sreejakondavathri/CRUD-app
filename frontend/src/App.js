@@ -6,7 +6,7 @@ function App() {
   const [title, setTitle] = useState("");
 
   const fetchTasks = async () => {
-    const res = await fetch("http://localhost:5000/tasks");
+    const res = await fetch("http://13.63.157.143:5000/tasks");
     const data = await res.json();
     setTasks(data);
   };
@@ -16,7 +16,7 @@ function App() {
   }, []);
 
   const addTask = async () => {
-    await fetch("http://localhost:5000/tasks", {
+    await fetch("http://13.63.157.143:5000/tasks", {
       method: "POST",
       headers: {"Content-Type":"application/json"},
       body: JSON.stringify({title})
